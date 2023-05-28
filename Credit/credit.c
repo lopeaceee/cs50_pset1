@@ -65,9 +65,9 @@ int sum_operator(int length, long credit_number)
     int j = 0;
     while (j < length)
     {
-        long number_as_digit = get_nth_starting(length, credit_number, length - j);
-        long number_with_residue = get_nth_starting(length, credit_number, length - j - 1) * 10;
-        long final_digit = number_as_digit - number_with_residue;
+        long number_with_digit = get_nth_starting(length, credit_number, length - j);
+        long number_residue = get_nth_starting(length, credit_number, length - j - 1) * 10;
+        long final_digit = number_with_digit - number_residue;
 
         sum += final_digit;
         j += 2;
