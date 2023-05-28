@@ -43,17 +43,6 @@ void check_if_credit(int length, long credit_number)
     }
 }
 
-int get_length(long credit_number)
-{
-    int i = 0;
-    while (credit_number > 0)
-    {
-        i++;
-        credit_number /= 10;
-    }
-    return i;
-}
-
 int sum_operator(int length, long credit_number)
 {
     int i = 1;
@@ -85,6 +74,17 @@ int sum_operator(int length, long credit_number)
     }
 
     return sum;
+}
+
+int get_length(long credit_number)
+{
+    int i = 0;
+    while (credit_number > 0)
+    {
+        i++;
+        credit_number /= 10;
+    }
+    return i;
 }
 
 long get_number(void)
