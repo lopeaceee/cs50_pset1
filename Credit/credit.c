@@ -17,8 +17,8 @@ int main(void)
 
 void check_if_credit(int length, long credit_number)
 {
-    int sum = sum_operator(length, credit_number) % 10;
-    if (sum == 0)
+    int sum_remainder = sum_operator(length, credit_number) % 10;
+    if (sum_remainder == 0)
     {
         if (length == 16 && get_nth_starting(length, credit_number, 2) > 50 && get_nth_starting(length, credit_number, 2) < 56)
         {
